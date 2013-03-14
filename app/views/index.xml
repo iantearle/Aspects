@@ -1,0 +1,19 @@
+<Alloy>
+	<Window class="container" layout="vertical">
+		<View id="form" layout="horizontal">
+			<View class="fields" layout="vertical" id="original">
+				<TextField id="x1" value="1024" />
+				<TextField id="y1" value="768" />
+			</View>
+			<View class="fields" layout="vertical" id="aspect">
+				<TextField id="x2" />
+				<TextField id="y2" />
+			</View>
+		</View>
+		<View id="tools" layout="hoizontal">
+			<Label id="ratio" />
+			<Label id="reset">RESET</Label>
+		</View>
+		<ImageView id="logo" />
+	</Window>
+</Alloy>
