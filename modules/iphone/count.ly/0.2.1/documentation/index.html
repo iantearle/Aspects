@@ -1,0 +1,91 @@
+<h1>Count.ly Titanium iOS SDK</h1>
+<p>Countly is an innovative, real-time, open source mobile analytics application. It collects data from mobile phones, and visualizes this information to analyze mobile application usage and end-user behavior. There are two parts of Countly: the server that collects and analyzes data, and mobile SDK that sends this data (for iOS &amp; Android).</p>
+<p>Countly Server;</p>
+<ul>
+<li><a href="https://github.com/Countly/countly-server">Countly Server (countly-server)</a></li>
+</ul>
+<p>Other Countly SDK repositories;</p>
+<ul>
+<li><a href="https://github.com/Countly/countly-sdk-android">Countly Android SDK (countly-sdk-android)</a></li>
+</ul>
+<h2>Installation</h2>
+<p>Clone git repo and move to Titanium Modules Folder
+<code>$ git clone https://github.com/euforic/Ti-Count.ly.git
+$ cd Ti-Count.ly
+$ cp count.ly-iphone-0.2.1.zip /Library/Application Support/Titanium/</code></p>
+<p>Register your module with your application by editing <code>tiapp.xml</code> and adding your module.</p>
+<p><code>&lt;modules&gt;
+  &lt;module version="0.2.1"&gt;count.ly&lt;/module&gt;
+&lt;/modules&gt;</code></p>
+<h2>Usage</h2>
+<h3>Start Count.ly</h3>
+<p><strong>Start Tracking</strong>
+<code>var countly = require('count.ly');
+countly.start('APP_KEY','http://API_HOST.com');</code></p>
+<h3>Record Events</h3>
+<p><strong>Fields</strong></p>
+<ul>
+<li>name : Name of the event to track</li>
+<li><em>(example - Track clicks on the help button "clickedHelp" )</em></li>
+<li>count : Number to increment the event in the db</li>
+<li><em>(example - User purchases item increment by 1 )</em></li>
+<li>sum : Sum of the event's action</li>
+<li><em>(example - User purchased 3 items at $5 each the sum would be 15)</em></li>
+<li>segmentation : Increment Multiple values with in the event</li>
+<li><em>(example - User updates 3 fields in there profile you could increment the profile changes {name:1,hometown:1,dob:1} )</em></li>
+</ul>
+<p><strong>Simple Event</strong>
+<code>countly.event({
+    name:'entered-store'
+  , count:1
+});</code></p>
+<p><strong>Event With Sum</strong>
+<code>countly.event({
+    name:'purchased-credits'
+  , count:3
+  , sum:18
+});</code></p>
+<p><strong>Event with Segmentation</strong>
+<code>countly.event({
+    name:'opened-chats'
+  , count:4
+  , segmentation:{dave:1, sue:1, tom:2 }
+});</code></p>
+<p><strong>Event with Segmentation and Sum</strong>
+<code>countly.event({
+    name:'purchase'
+  , count:5
+  , sum:100
+  , segmentation:{dogs:2, cats:1, mice:1, treats:1 }
+});</code></p>
+<h3>Metrics Data</h3>
+<p><code>console.log('device',countly.device);
+console.log('deviceName',countly.deviceName);
+console.log('devicePlatform',countly.platform)
+console.log('multitaskingSupported',countly.multitaskingSupported);
+console.log('orientation', countly.orientation);
+console.log('osVersion', countly.osVersion);
+console.log('carrier', countly.carrier);
+console.log('resolution', countly.resolution);
+console.log('locale',countly.locale);
+console.log('appVersion',countly.appVersion);
+console.log('osVersion',countly.osVersion);</code></p>
+<h2>License</h2>
+<p>(The MIT License)</p>
+<p>Copyright (c) 2012 Christian Sullivan &lt;cs@euforic.co&gt;</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>

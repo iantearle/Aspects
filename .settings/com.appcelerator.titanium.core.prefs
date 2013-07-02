@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+provisioning_profiles/development/63E852AD-2C53-4983-869B-CAF841FCAC54/appid=com.wearecondiment.somethingblew
+provisioning_profiles/development/63E852AD-2C53-4983-869B-CAF841FCAC54/name=Something Blew Dev
+provisioning_profiles/development/63E852AD-2C53-4983-869B-CAF841FCAC54/uuid=63E852AD-2C53-4983-869B-CAF841FCAC54
+provisioning_profiles/distribution/0EA83A21-64BB-4F73-BC03-478BD955A1FF/appid=com.wearecondiment.somethingblew
+provisioning_profiles/distribution/0EA83A21-64BB-4F73-BC03-478BD955A1FF/name=Something Blew Distribution
+provisioning_profiles/distribution/0EA83A21-64BB-4F73-BC03-478BD955A1FF/uuid=0EA83A21-64BB-4F73-BC03-478BD955A1FF

@@ -1,3 +1,6 @@
+var countly = require('count.ly');
+countly.start('e068932d185d525a2ee3ed0119a45a31151b4bd7','http://goheritage.info');
+
 var lastTarget;
 
 function round() {
