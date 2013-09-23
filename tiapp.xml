@@ -2,7 +2,7 @@
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>com.littlepolarapps.aspects</id>
     <name>Aspects</name>
-	<version>0.2</version>
+	<version>0.3</version>
     <publisher>Little Polar Apps</publisher>
     <url>http://littlepolarapps.com</url>
     <description>not specified</description>
@@ -48,7 +48,7 @@
         <target device="iphone">true</target>
         <target device="mobileweb">false</target>
     </deployment-targets>
-    <sdk-version>3.1.1.GA</sdk-version>
+    <sdk-version>3.1.3.GA</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>
@@ -59,6 +59,8 @@
                 <array>
                     <string>/fonts/Brandon_bld.otf</string>
                 </array>
+                <key>UIStatusBarStyle</key>
+                <string>UIStatusBarStyleLightContent</string>
             </dict>
         </plist>
     </ios>
