@@ -2,7 +2,7 @@
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>com.littlepolarapps.aspects</id>
     <name>Aspects</name>
-	<version>0.3</version>
+	<version>0.3.0</version>
     <publisher>Little Polar Apps</publisher>
     <url>http://littlepolarapps.com</url>
     <description>not specified</description>
